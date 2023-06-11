@@ -5,7 +5,7 @@ const getAllUsersController = async (req, res) => {
   try {
     const users = await userModel.find({});
     res.status(200).send({
-      success: false,
+      success: true,
       message: "Users Data",
       data: users,
     });
@@ -23,7 +23,7 @@ const getAllDoctorsController = async (req, res) => {
   try {
     const doctors = await doctorModel.find({});
     res.status(200).send({
-      success: false,
+      success: true,
       message: "Doctors Data",
       data: doctors,
     });
