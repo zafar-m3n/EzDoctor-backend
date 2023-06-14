@@ -56,7 +56,6 @@ router.post(
   bookingAvailabilityController
 );
 
-
 // Appointments List || GET
 router.get("/user-appointments", authMiddleware, userAppointmentsController);
 
