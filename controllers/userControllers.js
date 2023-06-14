@@ -204,7 +204,7 @@ const bookAppointmentController = async (req, res) => {
 
 const bookingAvailabilityController = async (req, res) => {
   try {
-    const date = moment(req.body.date, "DD-MM-YYYY").toISOString();
+    const date = moment(req.body.date, "DD-MM-YY").toISOString();
     const fromTime = moment(req.body.time, "HH:mm")
       .subtract(1, "hours")
       .toISOString();
@@ -239,12 +239,13 @@ const bookingAvailabilityController = async (req, res) => {
   }
 };
 
+
 const userAppointmentsController = async (req, res) => {
   try {
     const appointments = await appointmentModel.find({
       userId: req.body.userId,
     });
-    return res.status(200).send({
+    res.status(200).send({
       success: true,
       message: "Appointments fetched successfully",
       data: appointments,

@@ -49,12 +49,13 @@ router.get("/getAllDoctors", authMiddleware, getAllDoctorsController);
 // Book Appointment || POST
 router.post("/book-appointment", authMiddleware, bookAppointmentController);
 
-// Book Appointment || POST
+//Book Appointment || POST
 router.post(
   "/booking-availability",
   authMiddleware,
   bookingAvailabilityController
 );
+
 
 // Appointments List || GET
 router.get("/user-appointments", authMiddleware, userAppointmentsController);
