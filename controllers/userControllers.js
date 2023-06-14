@@ -239,7 +239,6 @@ const bookingAvailabilityController = async (req, res) => {
   }
 };
 
-
 const userAppointmentsController = async (req, res) => {
   try {
     const appointments = await appointmentModel.find({
